@@ -1,0 +1,48 @@
+{
+  "name": "cashflow-api",
+  "version": "1.0.0",
+  "description": "cashflow api",
+  "main": "index.js",
+  "dependencies": {
+    "api": "^4.4.0",
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.3",
+    "express-validators": "^1.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "plaid": "^9.9.0",
+    "stable": "^0.1.8",
+    "string-hash": "^1.1.3",
+    "twilio": "^3.71.3"
+  },
+  "scripts": {
+    "start": "nodemon app.js",
+    "build-dev": "heroku git:remote -a cashflow-backend-development&&git push heroku dev:master",
+    "build-qa": "heroku git:remote -a cashflow-backend-qa&&git push heroku qa:master",
+    "build-uat": "heroku git:remote -a cashflow-backend-uat&&git push heroku uat:master",
+    "build-production": "heroku git:remote -a cashflow-backend-production&&git push heroku production:master",
+    "dev-logs": "heroku logs --tail --app cashflow-backend-development",
+    "qa-logs": "heroku logs --tail --app cashflow-backend-qa",
+    "uat-logs": "heroku logs --tail --app cashflow-backend-uat",
+    "production-logs": "heroku logs --tail --app cashflow-backend-production",
+    "dev": "npm run start",
+    "live-server": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdrobinson94/cashflow-api.git"
+  },
+  "author": "Terry R",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tdrobinson94/cashflow-api/issues"
+  },
+  "homepage": "https://github.com/tdrobinson94/cashflow-api#readme"
+}

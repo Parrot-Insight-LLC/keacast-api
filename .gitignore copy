@@ -1,0 +1,8 @@
+# Node modules
+node_modules
+
+# Environment variables, never commit this file
+.env
+localhost.key
+localhost.pem
+localhost-key.pem
