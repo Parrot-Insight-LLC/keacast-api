@@ -14,9 +14,9 @@ exports.circlePing = async (req, res) => {
     method: 'get',
     url: `${CIRCLE_SANDBOX_API_URL}`,
     headers: {
-      Authorization: `Bearer ${CIRCLE_SANDBOX_API_KEY}`,
+      'Authorization': `Bearer ${CIRCLE_SANDBOX_API_KEY}`,
       'Access-Control-Allow-Origin': '*',
-      Accept: 'application/json',
+      'Accept': 'application/json',
     },
     data: {},
   })
@@ -27,6 +27,11 @@ exports.circlePing = async (req, res) => {
     .catch(function (error) {
       console.log(error)
     })
+
+  // circle_sdk
+  //   .rootPing()
+  //   .then((res) => console.log(res))
+  //   .catch((err) => console.error(err))
 }
 //   circle_sdk
 //     .rootPing()
