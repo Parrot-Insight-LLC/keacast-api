@@ -2,9 +2,9 @@ var config = {}
 var fs = require('fs')
 const dotenv = require('dotenv')
 dotenv.config()
-const serverCa = [
-  fs.readFileSync(process.env.WEBSITE_PUBLIC_CERTS_PATH, 'utf8'),
-]
+// const serverCa = [
+//   fs.readFileSync(process.env.WEBSITE_PUBLIC_CERTS_PATH, 'utf8'),
+// ]
 
 config.connection = {
   host: process.env.DB_HOST,
