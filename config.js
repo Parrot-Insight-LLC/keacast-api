@@ -3,10 +3,7 @@ var fs = require('fs')
 const dotenv = require('dotenv')
 dotenv.config()
 const serverCa = [
-  fs.readFileSync(
-    'C:/Users/garobins/Documents/ParrotInsights/keacast-api/DigiCertGlobalRootCA.crt.pem',
-    'utf8',
-  ),
+  fs.readFileSync(process.env.WEBSITE_PUBLIC_CERTS_PATH, 'utf8'),
 ]
 
 config.connection = {
@@ -15,7 +12,7 @@ config.connection = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_DATABASE,
   ssl: {
-    ca: fs.readFileSync(process.env.WEBSITE_PUBLIC_CERTS_PATH),
+    ca: serverCa,
   },
 }
 
